@@ -870,8 +870,8 @@ ohai "Downloading and installing Homebrew..."
   # ensure we don't munge line endings on checkout
   execute "git" "config" "core.autocrlf" "false"
 
-  execute "git" "fetch" "--force" "origin"
-  execute "git" "fetch" "--force" "--tags" "origin"
+  execute "git" "fetch" "--force" "--depth=1" "origin"
+  execute "git" "fetch" "--force" "--depth=1" "--tags" "origin"
 
   execute "git" "reset" "--hard" "origin/master"
 
